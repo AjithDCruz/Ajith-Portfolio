@@ -334,7 +334,7 @@ async function sendMessage(){
 
   try{
     // Calls YOUR serverless function — API key stays on the server
-    const res = await fetch('/.netlify/functions/chat', {
+    const res = await fetch('https://ajith-r-portfolio.netlify.app/.netlify/functions/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: text })
