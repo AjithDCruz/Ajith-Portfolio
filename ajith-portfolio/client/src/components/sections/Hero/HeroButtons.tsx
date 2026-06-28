@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 function HeroButtons() {
   return (
-    <div className="hero-buttons">
+    <motion.div
+  className="hero-buttons"
+  initial={{ opacity: 0, y: 25 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.9, duration: 0.7 }}
+>
 
       <button className="primary-btn">
         Start My Journey
@@ -10,7 +17,7 @@ function HeroButtons() {
         Download Resume
       </button>
 
-    </div>
+    </motion.div>
   );
 }
 

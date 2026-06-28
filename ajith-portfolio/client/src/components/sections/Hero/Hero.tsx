@@ -5,11 +5,16 @@ import HeroImage from "./HeroImage";
 function Hero() {
   return (
     <section className="hero">
-      <div className="container hero-wrapper">
-        <HeroContent />
-        <HeroImage />
-      </div>
-    </section>
+  <div className="container hero-wrapper">
+    <HeroContent />
+    <HeroImage />
+  </div>
+
+  <div className="scroll-indicator">
+    <span>Continue Journey</span>
+    <div className="scroll-arrow">↓</div>
+  </div>
+</section>
   );
 }
 
