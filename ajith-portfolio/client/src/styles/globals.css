@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@import "./reset.css";
+@import "./variables.css";
+@import "./colors.css";
+@import "./typography.css";
+@import "./spacing.css";
+@import "./animations.css";
+
+body{
+    background: var(--color-bg);
+    color: var(--text-primary);
+    font-family: "Inter", sans-serif;
+}
+
+#root{
+    min-height:100vh;
+}
+
+.container{
+    width:min(1280px,92%);
+    margin:auto;
+}
