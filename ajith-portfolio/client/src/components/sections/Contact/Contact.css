@@ -1,0 +1,153 @@
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(124, 58, 237, 0.18),
+      transparent 38%
+    ),
+    #050816;
+  color: white;
+}
+
+.contact-container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-chapter {
+  margin-bottom: 22px;
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.contact h2 {
+  margin: 0;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.1;
+}
+
+.contact h3 {
+  margin-top: 24px;
+  color: #94a3b8;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.contact-line {
+  width: 120px;
+  height: 3px;
+  margin: 36px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c3aed,
+    transparent
+  );
+}
+
+.contact-card {
+  margin-top: 75px;
+  padding: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 30px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.11),
+      rgba(255, 255, 255, 0.04)
+    );
+  backdrop-filter: blur(20px);
+  box-shadow: 0 32px 110px rgba(124, 58, 237, 0.16);
+}
+
+.contact-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 38px;
+}
+
+.contact-actions a {
+  min-width: 160px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.contact-primary {
+  color: white;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  box-shadow: 0 14px 35px rgba(124, 58, 237, 0.28);
+}
+
+.contact-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-actions a:hover {
+  transform: translateY(-4px);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.contact-links a {
+  color: #94a3b8;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #8b5cf6;
+}
+
+@media (max-width: 576px) {
+  .contact {
+    padding: 100px 0;
+  }
+
+  .contact-card {
+    padding: 32px 24px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .contact-actions a {
+    width: 100%;
+  }
+
+  .contact-intro {
+    font-size: 17px;
+  }
+}

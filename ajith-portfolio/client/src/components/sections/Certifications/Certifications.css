@@ -1,0 +1,142 @@
+.certifications {
+  min-height: 100vh;
+  padding: 140px 0;
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(124, 58, 237, 0.13),
+      transparent 34%
+    ),
+    #050816;
+  color: white;
+}
+
+.certifications-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.certifications-chapter {
+  margin-bottom: 22px;
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.certifications h2 {
+  margin: 0;
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 1.1;
+}
+
+.certifications h3 {
+  margin-top: 24px;
+  color: #94a3b8;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.certifications-line {
+  width: 120px;
+  height: 3px;
+  margin: 36px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c3aed,
+    transparent
+  );
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 80px;
+}
+
+.certificate-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+  text-align: left;
+  box-shadow: 0 24px 80px rgba(124, 58, 237, 0.1);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 30px 100px rgba(124, 58, 237, 0.18);
+}
+
+.certificate-image-wrapper {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.certificate-card:hover .certificate-image {
+  transform: scale(1.04);
+}
+
+.certificate-content {
+  padding: 24px;
+}
+
+.certificate-category {
+  color: #8b5cf6;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.certificate-content h4 {
+  margin: 14px 0 8px;
+  color: #f8fafc;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.certificate-content p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+@media (max-width: 980px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .certifications {
+    padding: 100px 0;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications h3 {
+    font-size: 20px;
+  }
+}
