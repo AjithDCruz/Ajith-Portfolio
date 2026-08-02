@@ -1,0 +1,251 @@
+.automation {
+  min-height: 100vh;
+  padding: 140px 0;
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(124, 58, 237, 0.14),
+      transparent 32%
+    ),
+    #050816;
+  color: white;
+}
+
+.automation-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.automation-chapter {
+  margin-bottom: 22px;
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.automation h2 {
+  margin: 0;
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 1.1;
+}
+
+.automation h3 {
+  margin-top: 24px;
+  color: #94a3b8;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.automation-line {
+  width: 120px;
+  height: 3px;
+  margin: 36px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c3aed,
+    transparent
+  );
+}
+
+.automation-description {
+  max-width: 900px;
+  margin: 70px auto 0;
+  color: #cbd5e1;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+@media (max-width: 576px) {
+  .automation {
+    padding: 100px 0;
+  }
+
+  .automation h3 {
+    font-size: 20px;
+  }
+
+  .automation-description {
+    font-size: 17px;
+  }
+}
+
+.automation-flow {
+  margin-top: 90px;
+}
+
+.automation-flow-label {
+  margin-bottom: 32px;
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.automation-flow-track {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+}
+
+.automation-flow-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.automation-flow-node {
+  width: 170px;
+  min-height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.11),
+      rgba(255, 255, 255, 0.035)
+    );
+  backdrop-filter: blur(18px);
+  box-shadow: 0 22px 70px rgba(124, 58, 237, 0.1);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.automation-flow-node:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 28px 90px rgba(124, 58, 237, 0.18);
+}
+
+.automation-flow-number {
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.automation-flow-node strong {
+  color: #f8fafc;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.automation-flow-connector {
+  width: 34px;
+  transform-origin: left;
+}
+
+.automation-flow-connector span {
+  color: #8b5cf6;
+  font-size: 28px;
+}
+
+@media (max-width: 1100px) {
+  .automation-flow-track {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .automation-flow-item {
+    flex-direction: column;
+  }
+
+  .automation-flow-node {
+    width: min(420px, 90vw);
+    min-height: 120px;
+  }
+
+  .automation-flow-connector {
+    width: auto;
+    height: 32px;
+  }
+
+  .automation-flow-connector span {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+}
+
+.automation-achievements {
+  margin-top: 100px;
+}
+
+.automation-achievements-label {
+  margin-bottom: 32px;
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.automation-achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.automation-achievement-card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.1),
+      rgba(255, 255, 255, 0.035)
+    );
+  box-shadow: 0 22px 70px rgba(124, 58, 237, 0.1);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.automation-achievement-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 30px 90px rgba(124, 58, 237, 0.18);
+}
+
+.automation-achievement-card strong {
+  color: #8b5cf6;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1;
+}
+
+.automation-achievement-card span {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .automation-achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .automation-achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { CountUp } from "react-countup";
 
 interface Props {
   college: string;
@@ -25,37 +24,21 @@ const EducationCard = ({
       transition={{ duration: 0.7 }}
     >
       <div className="education-top">
-
-        <div className="college-icon">
-          🎓
-        </div>
+        <div className="college-icon">🎓</div>
 
         <div>
-
           <h4>{college}</h4>
-
           <p>{degree}</p>
-
           <span>{specialization}</span>
-
         </div>
-
       </div>
 
       <div className="cgpa-section">
-
         <p>CGPA</p>
-
         <h1>{cgpa}</h1>
-
       </div>
 
-      <div className="duration">
-
-        {duration}
-
-      </div>
-
+      <div className="duration">{duration}</div>
     </motion.div>
   );
 };

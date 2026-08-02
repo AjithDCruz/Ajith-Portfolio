@@ -2,6 +2,7 @@ import Navbar from "./components/layout/Navbar/Navbar";
 import Hero from "./components/sections/Hero/Hero";
 import Story from "./components/sections/Story/Story";
 import Experience from "./components/sections/Experience/Experience";
+import Automation from "./components/sections/Automation/Automation";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Story />
       <Experience />
+      <Automation />
     </>
   );
 }
