@@ -1,0 +1,85 @@
+.college-scene {
+
+    position: relative;
+
+    perspective: 1400px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    animation: floating 6s ease-in-out infinite;
+
+}
+
+.college-scene img {
+
+    width:100%;
+
+    display:block;
+
+    border-radius:28px;
+
+    transition:.6s;
+
+    box-shadow:
+
+        0 40px 120px rgba(124,58,237,.28);
+
+}
+
+.college-scene:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.location-badge{
+
+    position:absolute;
+
+    top:24px;
+
+    left:24px;
+
+    z-index:5;
+
+    background:rgba(15,23,42,.75);
+
+    backdrop-filter:blur(14px);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
