@@ -8,7 +8,7 @@ import { education } from "../../../data/story/education";
 
 function Story() {
   return (
-    <section className="story">
+    <section className="story" id="about">
       <div className="story-container">
         <ChapterHeader
           chapter={education.chapter}
