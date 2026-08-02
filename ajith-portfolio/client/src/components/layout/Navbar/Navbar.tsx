@@ -1,24 +1,66 @@
+import { useState } from "react";
 import "./Navbar.css";
+
 import { navigationLinks } from "../../../data/navigation";
-import Button from "../../common/Button/Button";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="navbar">
-      <div className="container navbar-content">
-        <div className="logo">AJITH.</div>
+    <header className="navbar">
+      <div className="navbar-container">
+        <a className="navbar-logo" href="#top" onClick={closeMenu}>
+          AJITH.
+        </a>
 
-        <ul className="nav-links">
+        <button
+          className="navbar-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((current) => !current)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
           {navigationLinks.map((link) => (
-            <li key={link.name}>
-              <a href={link.href}>{link.name}</a>
-            </li>
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={closeMenu}
+            >
+              {link.name}
+            </a>
           ))}
-        </ul>
 
-        <Button>Resume</Button>
+          <a
+            className="navbar-resume-mobile"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            onClick={closeMenu}
+          >
+            Resume
+          </a>
+        </nav>
+
+        <a
+          className="navbar-resume"
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Resume
+        </a>
       </div>
-    </nav>
+    </header>
   );
 }
 

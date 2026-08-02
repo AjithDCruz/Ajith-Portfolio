@@ -1,56 +1,205 @@
-.navbar{
-    position:sticky;
-    top:0;
-
-    backdrop-filter:blur(20px);
-
-    background:rgba(5,8,22,.75);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    z-index:999;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 8, 22, 0.92);
+  backdrop-filter: blur(18px);
 }
 
-.navbar-content{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    height:80px;
-
+.navbar-container {
+  width: min(1240px, 92%);
+  min-height: 78px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-.logo{
-
-    font-size:28px;
-
-    font-weight:700;
-
-    color:var(--color-primary);
-
+.navbar-logo {
+  flex-shrink: 0;
+  color: #8b5cf6;
+  font-size: 28px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
-.nav-links{
-
-    display:flex;
-
-    gap:32px;
-
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
-.nav-links a{
-
-    color:var(--text-primary);
-
-    transition:var(--transition);
-
+.navbar-menu a {
+  position: relative;
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover{
+.navbar-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: #8b5cf6;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
 
-    color:var(--color-primary);
+.navbar-menu a:hover {
+  color: #a78bfa;
+}
 
+.navbar-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-resume {
+  flex-shrink: 0;
+  padding: 14px 28px;
+  border-radius: 16px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.25);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(124, 58, 237, 0.38);
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-resume-mobile {
+  display: none;
+}
+
+/* Tablet and mobile navbar */
+
+@media (max-width: 900px) {
+  .navbar-container {
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .navbar-toggle {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+  }
+
+  .navbar-toggle span {
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: #f8fafc;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 18px;
+    z-index: 1001;
+    width: min(310px, calc(100vw - 36px));
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 20px;
+    background: rgba(7, 11, 29, 0.97);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu a {
+    width: 100%;
+    padding: 13px 15px;
+    border-radius: 11px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .navbar-menu a::after {
+    display: none;
+  }
+
+  .navbar-menu a:hover {
+    color: white;
+    background: rgba(124, 58, 237, 0.15);
+  }
+
+  .navbar-resume {
+    display: none;
+  }
+
+  .navbar-resume-mobile {
+    display: block;
+    margin-top: 6px;
+    color: white !important;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    min-height: 74px;
+    padding: 0 16px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .navbar-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .navbar-menu {
+    right: 12px;
+    width: calc(100vw - 24px);
+  }
 }
