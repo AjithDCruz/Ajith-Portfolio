@@ -236,3 +236,132 @@
     line-height:2;
 
 }
+
+@media (max-width: 576px) {
+  .story {
+    width: 100%;
+    max-width: 100%;
+    padding: 100px 16px 80px;
+    overflow-x: hidden;
+  }
+
+  .chapter-header {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .chapter-header h2 {
+    font-size: 48px;
+    line-height: 1.12;
+    overflow-wrap: normal;
+  }
+
+  .chapter-header h3 {
+    padding: 0 8px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .story-layout {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .story-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .college-scene {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .college-scene img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .education-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 32px 24px;
+  }
+
+  .education-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .education-top > div:last-child {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .college-icon {
+    font-size: 44px;
+  }
+
+  .education-top h4 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.4;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .education-top p {
+    margin-top: 14px;
+    font-size: 16px;
+  }
+
+  .education-top span {
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cgpa-section {
+    margin-top: 42px;
+    text-align: center;
+  }
+
+  .cgpa-section h1 {
+    font-size: 64px;
+  }
+
+  .duration {
+    margin-top: 42px;
+    text-align: center;
+  }
+
+  .story-layout {
+  gap: 32px;
+}
+
+.college-scene {
+  margin-bottom: 0;
+}
+
+.story-content {
+  margin-top: 0;
+}
+
+.education-card {
+  margin-top: 18px;
+}
+}
